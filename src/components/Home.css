@@ -1,0 +1,191 @@
+/* Home.css */
+.slider-image {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; /* Ensure images cover the area */
+    border-radius: 8px; /* Optional: for rounded corners */
+  }
+  
+  @media (max-width: 768px) {
+    .slider-image {
+      max-height: 300px; /* Adjust max height for smaller screens */
+    }
+  }
+  
+  .custom-card {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .custom-card:hover {
+    transform: scale(1.05); /* Scale the card when hovered */
+  }
+  
+  .slider-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .slider-image {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+  }
+  
+  /* Media Queries for mobile */
+  @media (max-width: 768px) {
+    .slider-image {
+      height: 50vh; /* Adjust slider height for smaller screens */
+    }
+  
+    .slider-caption {
+      font-size: 1.5rem; /* Smaller font size for the slider caption */
+      bottom: 10%;
+      padding: 5px;
+    }
+  
+    .custom-card {
+      margin-bottom: 2rem;
+    }
+  
+    .container {
+      padding: 1rem;
+    }
+  
+    .mb-4 {
+      margin-bottom: 1.5rem !important; /* Smaller margins for mobile */
+    }
+  }
+  
+  .stats-section {
+    background: linear-gradient(135deg, #007bff, #00c6ff); /* Gradient background */
+    padding: 50px 0;
+    color: white;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out; /* Optional smooth transition */
+}
+
+.stat-item {
+    margin-bottom: 30px;
+}
+
+.stat-icon {
+    margin-bottom: 15px;
+    color: white;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stats-section {
+        padding: 30px 0;
+    }
+}
+
+
+/* Home.css */
+
+/* About section */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.video-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    opacity: 0; /* Start with opacity 0 */
+    transition: opacity 0.8s ease-in-out;
+}
+
+.text-wrapper {
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateY(20px); /* Start with slight downward position */
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.animate-fade-in {
+    opacity: 1; /* Fade in when in view */
+}
+
+.animate-slide-up {
+    opacity: 1; /* Fade in when in view */
+    transform: translateY(0); /* Slide up to natural position */
+}
+
+/* Bullet points */
+.bullet-points {
+    margin-top: 20px;
+}
+
+.bullet-points ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.bullet-points ul li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.bullet-points ul li::before {
+    content: '\f054'; /* FontAwesome arrow icon */
+    font-family: 'FontAwesome';
+    margin-right: 10px;
+    color: #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .video-wrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .text-wrapper {
+        padding: 0 20px;
+    }
+}
+
+.slick-dots {
+    bottom: -30px; /* Adjust position of dots */
+  }
+  
+  .slick-slide img {
+    transition: transform 0.3s ease; /* Add smooth scaling */
+  }
+  
+  .slick-slide:hover img {
+    transform: scale(1.05); /* Scale image on hover */
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease forwards; /* Adjust duration and easing as needed */
+  }
+
+  
+  
+  

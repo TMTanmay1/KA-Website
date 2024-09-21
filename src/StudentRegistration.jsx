@@ -441,7 +441,7 @@ const StudentRegistration = () => {
 
           {/* Submit Button */}
           <Grid item xs={12}>
-            <Button variant="contained" color="primary" type="submit" fullWidth>
+            <Button variant="contained" color="primary" type="submit" fullWidth sx={{mb:5}}>
               Submit
             </Button>
           </Grid>
