@@ -87,7 +87,7 @@ const keyFeaturesData = [
     },
     {
       title: "All India Accepted Certificate",
-      description: "The certificates issued by our organization are accepted in both government and private sector employment opportunities.",
+      description: "The certificates issued by our organization are accepted in both government and private sector employment opportunities",
     },
   ];
 
