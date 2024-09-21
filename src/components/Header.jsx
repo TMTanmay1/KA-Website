@@ -24,8 +24,9 @@ function Header() {
     setAnchorFn(event.currentTarget);
   };
 
-  const handleMenuClose = (setAnchorFn) => () => {
+  const handleMenuClose = (setAnchorFn, action) => () => {
     setAnchorFn(null);
+    if (action) action(); // Call action if provided
   };
 
   const toggleDrawer = (open) => () => {
@@ -46,6 +47,9 @@ function Header() {
     toggleDrawer(false)();
   };
 
+  const handleAdminLoginClick = () => {
+    window.open('https://krishna-academy.vercel.app/', '_blank');
+  };
 
   const styles = {
     logo: {
@@ -97,7 +101,7 @@ function Header() {
               <ListItem button style={styles.nested} onClick={toggleDrawer(false)}>
                 <ListItemText primary="Staff Login" />
               </ListItem>
-              <ListItem button style={styles.nested} onClick={toggleDrawer(false)}>
+              <ListItem button style={styles.nested} onClick={() => { handleAdminLoginClick(); toggleDrawer(false)(); }}>
                 <ListItemText primary="Admin Login" />
               </ListItem>
             </List>
@@ -161,7 +165,9 @@ function Header() {
             onClose={handleMenuClose(setAnchorElCenter)}
           >
             <MenuItem onClick={handleMenuClose(setAnchorElCenter)}>Staff Login</MenuItem>
-            <MenuItem onClick={handleMenuClose(setAnchorElCenter)}>Admin Login</MenuItem>
+            <MenuItem onClick={() => { handleAdminLoginClick(); handleMenuClose(setAnchorElCenter)(); }}>
+              Admin Login
+            </MenuItem>
           </Menu>
           <Button className="menuButton" onClick={handleMenuOpen(setAnchorElStudent)}>
             Student
