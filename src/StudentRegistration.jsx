@@ -61,7 +61,16 @@ const StudentRegistration = () => {
     fetchCourses();
   }, []);
 
-  console.log(courses , "courses");
+  const handleCourseChange = (e) => {
+    const selectedId = e.target.value;
+    const selectedCourseObj = courses.find((course) => course.id === selectedId);
+
+    // Set both course ID and its duration
+    if (selectedCourseObj) {
+      setSelectedCourse(selectedCourseObj.id); // Only store the ID in selectedCourse
+      setDuration(Number(selectedCourseObj.COURSE_duration)); // Store duration as a number
+    }
+  };
 
   const [p, setP] = useState(null);
 
@@ -150,6 +159,7 @@ const StudentRegistration = () => {
       student_photo: p,
       student_document: d,
       student_sign: s,
+      password:''
     };
 
     console.log('Payload:', payload);
@@ -197,7 +207,7 @@ const StudentRegistration = () => {
       <form onSubmit={handleSubmit}>
         <Grid container spacing={3}>
           {/* Duration */}
-          <Grid item xs={12} sm={6}>
+          {/* <Grid item xs={12} sm={6}>
             <FormControl fullWidth>
               <InputLabel id="duration-label">Duration</InputLabel>
               <Select labelId="duration-label" id="duration" value={duration} onChange={(e) => setDuration(e.target.value)}>
@@ -206,13 +216,13 @@ const StudentRegistration = () => {
                 <MenuItem value="24">24 Months</MenuItem>
               </Select>
             </FormControl>
-          </Grid>
+          </Grid> */}
 
           {/* Course */}
           <Grid item xs={12} sm={6}>
             <FormControl fullWidth>
               <InputLabel id="course-label">Course</InputLabel>
-              <Select labelId="course-label" id="course" value={selectedCourse} onChange={(e) => setSelectedCourse(e.target.value)} required>
+              <Select labelId="course-label" id="course" value={selectedCourse} onChange={handleCourseChange} required>
                 {courses.map((course) => (
                   <MenuItem key={course.id} value={course.id}>
                     {course.COURSE_name}
@@ -221,6 +231,17 @@ const StudentRegistration = () => {
               </Select>
             </FormControl>
           </Grid>
+
+          <Grid item xs={12} sm={6}>
+        <TextField
+          fullWidth
+          label="Duration"
+          value={duration ? `${duration} Months` : ""}
+          InputProps={{
+            readOnly: true,
+          }}
+        />
+      </Grid>
 
           {/* Name */}
           <Grid item xs={12} sm={6}>

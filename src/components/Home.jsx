@@ -12,6 +12,9 @@ import './Home.css'; // Import custom CSS for additional styling
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import banner1 from '../assets/banner1.webp';
 import banner2 from '../assets/banner2.webp';
+import banner3 from '../assets/Slider3.webp';
+import banner4 from '../assets/Slider4.webp';
+import banner5 from '../assets/Slider2.webp';
 import banner from '../assets/banner.webp';
 import app from '../assets/app.webp';
 import ascii from '../assets/ascii.webp';
@@ -33,11 +36,11 @@ import team2 from '../assets/team2.jpeg';
 import team3 from '../assets/team3.jpeg';
 
 const environmentSlides = [
-    { img: img1, caption: 'Learn with the Best!' },
-    { img: img2, caption: 'Welcome to Our Academy!' },
-    { img: img3, caption: 'Learn with the Best!' },
-    { img: img4, caption: 'Welcome to Our Academy!' },
-    { img: img5, caption: 'Learn with the Best!' }
+    { img: img1, caption: '' },
+    { img: img2, caption: '' },
+    { img: img3, caption: '' },
+    { img: img4, caption: '' },
+    { img: img5, caption: '' }
 
   ];
 
@@ -61,7 +64,10 @@ const cardData = [
 
 const slides = [
   { img: banner1, caption: 'Welcome to Our Academy!' },
-  { img: banner2, caption: 'Learn with the Best!' }
+  { img: banner2, caption: 'Learn with the Best!' },
+  { img: banner3, caption: 'Get Certified!' },
+  { img: banner4, caption: 'Boost Your Career!' },
+  { img: banner5, caption: 'Join Us Today!' },
 ];
 
 const keyFeaturesData = [

@@ -37,6 +37,11 @@ function Header() {
     setSubmenuOpen((prevState) => !prevState);
   };
 
+  const handleCoursesClick = () => {
+    navigate('/courses');
+    toggleDrawer(false)();
+  };
+
   const handleRegistrationClick = () => {
     navigate('/student-registration');
     toggleDrawer(false)();
@@ -91,6 +96,9 @@ function Header() {
           </ListItem>
           <ListItem button onClick={handleRegistrationClick}>
             <ListItemText primary="Registration" />
+          </ListItem>
+          <ListItem button onClick={handleCoursesClick}>
+            <ListItemText primary="Our Courses" />
           </ListItem>
           <ListItem button onClick={toggleSubmenu(setCenterLoginOpen)}>
             <ListItemText primary="Center Login" />
@@ -155,6 +163,7 @@ function Header() {
         <div className="d-none d-md-flex">
           <Button className="menuButton" onClick={handleHomeClick}>Home</Button>
           <Button className="menuButton" onClick={handleRegistrationClick}>Registration</Button>
+          <Button className="menuButton" onClick={handleCoursesClick}>Our Courses</Button>
           <Button className="menuButton" onClick={handleMenuOpen(setAnchorElCenter)}>
             Center Login
             <ExpandMoreIcon style={styles.arrowIcon} />

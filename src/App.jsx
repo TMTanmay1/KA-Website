@@ -4,6 +4,7 @@ import StudentRegistration from './StudentRegistration';
 import Header from './components/Header';
 import Home from './components/Home';
 import Footer from './components/Footer';
+import Courses from './components/Courses';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/student-registration" element={<StudentRegistration />} />
+        <Route path="/courses" element={<Courses />} />
       </Routes>
       <Footer />
     </Router>
