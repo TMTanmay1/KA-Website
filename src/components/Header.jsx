@@ -56,6 +56,18 @@ function Header() {
     window.open('https://krishna-academy.vercel.app/', '_blank');
   };
 
+  const handleStudentLoginClick = () => {
+    window.open('https://ka-student-dashboard.vercel.app/', '_blank');
+  };
+
+  const handleCBMCEClick = () => {
+    window.open('https://cbmceindia.com/student/verification/', '_blank');
+  };
+
+  const handleCBVSDClick = () => {
+    window.open('https://cbvsdindia.com/student/verification/', '_blank');
+  };
+
   const styles = {
     logo: {
       marginRight: 'auto',
@@ -120,13 +132,13 @@ function Header() {
           </ListItem>
           <Collapse in={studentMenuOpen} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItem button style={styles.nested} onClick={toggleDrawer(false)}>
+              <ListItem button style={styles.nested} onClick={() => { handleStudentLoginClick(); toggleDrawer(false)(); }}>
                 <ListItemText primary="Student Login" />
               </ListItem>
-              <ListItem button style={styles.nested} onClick={toggleDrawer(false)}>
-                <ListItemText primary="CBMCe" />
+              <ListItem button style={styles.nested} onClick={() => { handleCBMCEClick(); toggleDrawer(false)(); }}>
+                <ListItemText primary="CBMCE" />
               </ListItem>
-              <ListItem button style={styles.nested} onClick={toggleDrawer(false)}>
+              <ListItem button style={styles.nested} onClick={() => { handleCBVSDClick(); toggleDrawer(false)(); }}>
                 <ListItemText primary="CBVSD" />
               </ListItem>
             </List>
@@ -187,9 +199,9 @@ function Header() {
             open={Boolean(anchorElStudent)}
             onClose={handleMenuClose(setAnchorElStudent)}
           >
-            <MenuItem onClick={handleMenuClose(setAnchorElStudent)}>Student Login</MenuItem>
-            <MenuItem onClick={handleMenuClose(setAnchorElStudent)}>CBMCe</MenuItem>
-            <MenuItem onClick={handleMenuClose(setAnchorElStudent)}>CBVSD</MenuItem>
+            <MenuItem onClick={() => { handleStudentLoginClick(); handleMenuClose(setAnchorElCenter)(); }}>Student Login</MenuItem>
+            <MenuItem onClick={() => { handleCBMCEClick(); handleMenuClose(setAnchorElCenter)(); }}>CBMCE</MenuItem>
+            <MenuItem onClick={() => { handleCBVSDClick(); handleMenuClose(setAnchorElCenter)(); }}>CBVSD</MenuItem>
           </Menu>
           <Button className="menuButton" onClick={handleMenuOpen(setAnchorElAcademy)}>
             Academy
