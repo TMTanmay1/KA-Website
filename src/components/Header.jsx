@@ -56,6 +56,10 @@ function Header() {
     window.open('https://krishna-academy.vercel.app/', '_blank');
   };
 
+  const handleStaffLoginClick = () => {
+    window.open('https://ka-staff-dashboard.vercel.app/', '_blank');
+  };
+
   const handleStudentLoginClick = () => {
     window.open('https://ka-student-dashboard.vercel.app/', '_blank');
   };
@@ -118,7 +122,7 @@ function Header() {
           </ListItem>
           <Collapse in={centerLoginOpen} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItem button style={styles.nested} onClick={toggleDrawer(false)}>
+              <ListItem button style={styles.nested} onClick={() => { handleStaffLoginClick(); toggleDrawer(false)(); }}>
                 <ListItemText primary="Staff Login" />
               </ListItem>
               <ListItem button style={styles.nested} onClick={() => { handleAdminLoginClick(); toggleDrawer(false)(); }}>
@@ -185,7 +189,7 @@ function Header() {
             open={Boolean(anchorElCenter)}
             onClose={handleMenuClose(setAnchorElCenter)}
           >
-            <MenuItem onClick={handleMenuClose(setAnchorElCenter)}>Staff Login</MenuItem>
+            <MenuItem onClick={() => { handleStaffLoginClick(); handleMenuClose(setAnchorElCenter)(); }}>Staff Login</MenuItem>
             <MenuItem onClick={() => { handleAdminLoginClick(); handleMenuClose(setAnchorElCenter)(); }}>
               Admin Login
             </MenuItem>
