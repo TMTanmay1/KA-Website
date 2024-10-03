@@ -11,6 +11,10 @@ const Footer = () => {
         navigate('/');
     };
 
+    const handleRefundCancellationClick = () => {
+        navigate('/refund-cancellation');
+    };
+
   return (
     <Box sx={{ backgroundColor: "#007bff", color: "#fff", padding: "40px 0", position: "relative" }}>
       <Container>
@@ -50,6 +54,7 @@ const Footer = () => {
               <li><a onClick={handleHomeClick} style={{ color: '#fff', textDecoration:'none', cursor:'pointer' }}>Home</a></li>
               <li><a href="#" style={{ color: '#fff' , textDecoration:'none', cursor:'pointer'}}>About Us</a></li>
               <li><a href="#" style={{ color: '#fff', textDecoration:'none', cursor:'pointer' }}>Contact Us</a></li>
+              <li><a onClick={handleRefundCancellationClick} style={{ color: '#fff', textDecoration:'none', cursor:'pointer' }}>Refund & Cancellation</a></li>
             </ul>
           </Grid>
 

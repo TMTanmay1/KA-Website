@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import Footer from './components/Footer';
 import Courses from './components/Courses';
+import RefundCancellation from './components/RefundCancellation';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/student-registration" element={<StudentRegistration />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/refund-cancellation" element={<RefundCancellation />} />
       </Routes>
       <Footer />
     </Router>
