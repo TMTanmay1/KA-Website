@@ -6,6 +6,8 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import Courses from './components/Courses';
 import RefundCancellation from './components/RefundCancellation';
+import PageNotFound from './components/PageNotFound';
+import Staff from './components/Staff';
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
         <Route path="/student-registration" element={<StudentRegistration />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/refund-cancellation" element={<RefundCancellation />} />
+        <Route path="/staff" element={<Staff />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
     </Router>

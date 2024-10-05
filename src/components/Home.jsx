@@ -1,6 +1,7 @@
 import React, { useState , useEffect } from 'react';
 import axios from 'axios';
 import Slider from 'react-slick';
+import { useNavigate } from 'react-router-dom';
 import { Box, Typography, Button, Container, Grid, TextField, MenuItem,
     Select,
     InputLabel,
@@ -116,6 +117,7 @@ const keyFeaturesData = [
   ];
 
 function Home() {
+  const navigate = useNavigate();
   const settings = {
     dots: true,
     infinite: true,
@@ -171,6 +173,10 @@ function Home() {
 
     fetchCourses();
   }, []);
+
+  const handleViewStaff = () => {
+    navigate('/staff');
+  };
 
 
   return (
@@ -464,6 +470,12 @@ function Home() {
       </Grid>
     </Container>
 
+        <div style={{display:"flex", justifyContent:"center"}}>
+          <Button variant="contained" color="secondary" sx={{ mt: 5 }} onClick={handleViewStaff}>
+            View Our Staff
+          </Button>
+        </div>
+       
     <section>
       <Container sx={{ my: 5 }}>
         <Box
@@ -482,6 +494,7 @@ function Home() {
             </Grid>
           </Grid>
 
+          
           <Grid container spacing={4}>
             <Grid item xs={12} md={6} sx={{ mt: 5 }}>
               <form id="myForm" action="#" >
