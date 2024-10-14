@@ -432,7 +432,7 @@ function Home() {
   </Grid>
 </Container>
 
-<Container sx={{ my: 5 }}>
+{/* <Container sx={{ my: 5 }}>
       <Typography variant="h4" align="center" gutterBottom sx={{mb: 5}}>
         One Team, One Dream
       </Typography>
@@ -468,7 +468,7 @@ function Home() {
           </Grid>
         ))}
       </Grid>
-    </Container>
+    </Container> */}
 
         <div style={{display:"flex", justifyContent:"center"}}>
           <Button variant="contained" color="secondary" sx={{ mt: 5 }} onClick={handleViewStaff}>
