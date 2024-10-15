@@ -14,17 +14,19 @@ function App() {
 
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/student-registration" element={<StudentRegistration />} />
-        <Route path="/courses" element={<Courses />} />
-        <Route path="/refund-cancellation" element={<RefundCancellation />} />
-        <Route path="/staff" element={<Staff />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
-      <Footer />
-    </Router>
+  <Header />
+  <div className="main-content">
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/student-registration" element={<StudentRegistration />} />
+      <Route path="/courses" element={<Courses />} />
+      <Route path="/refund-cancellation" element={<RefundCancellation />} />
+      <Route path="/staff" element={<Staff />} />
+      <Route path="*" element={<PageNotFound />} />
+    </Routes>
+  </div>
+  <Footer />
+</Router>
   )
 }
 

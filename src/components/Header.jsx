@@ -167,7 +167,7 @@ function Header() {
   );
 
   return (
-    <AppBar position="static" color="default">
+    <AppBar position="fixed" className="appBarFixed" color="default">
       <Toolbar style={styles.toolbar}>
         <div style={styles.logo}>
           <img src={Logo} alt="Logo" height="50" />
