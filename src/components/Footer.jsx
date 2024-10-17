@@ -15,6 +15,10 @@ const Footer = () => {
         navigate('/refund-cancellation');
     };
 
+    const handleTermsConditionsClick = () => {
+        navigate('/terms-conditions');
+    }
+
   return (
     <Box sx={{ backgroundColor: "#007bff", color: "#fff", padding: "40px 0", position: "relative" }}>
       <Container>
@@ -55,6 +59,7 @@ const Footer = () => {
               <li><a href="#" style={{ color: '#fff' , textDecoration:'none', cursor:'pointer'}}>About Us</a></li>
               <li><a href="#" style={{ color: '#fff', textDecoration:'none', cursor:'pointer' }}>Contact Us</a></li>
               <li><a onClick={handleRefundCancellationClick} style={{ color: '#fff', textDecoration:'none', cursor:'pointer' }}>Refund & Cancellation</a></li>
+              <li><a onClick={handleTermsConditionsClick} style={{ color: '#fff', textDecoration:'none', cursor:'pointer' }}>Terms & Conditions</a></li>
             </ul>
           </Grid>
 

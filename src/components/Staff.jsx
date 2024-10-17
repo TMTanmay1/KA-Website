@@ -8,7 +8,11 @@ function Staff() {
 
   // Fetch staff data from API
   useEffect(() => {
-    axios.get('https://crpch.in/api/ka/staff_copy/')
+    axios.get('https://crpch.in/api/ka/staff_copy/',{
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
       .then(response => {
         if (response.data.status) {
           setStaffData(response.data.table_data);

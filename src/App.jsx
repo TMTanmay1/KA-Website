@@ -8,6 +8,7 @@ import Courses from './components/Courses';
 import RefundCancellation from './components/RefundCancellation';
 import PageNotFound from './components/PageNotFound';
 import Staff from './components/Staff';
+import TC from './components/TC';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Route path="/courses" element={<Courses />} />
       <Route path="/refund-cancellation" element={<RefundCancellation />} />
       <Route path="/staff" element={<Staff />} />
+      <Route path="/terms-conditions" element={<TC />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   </div>

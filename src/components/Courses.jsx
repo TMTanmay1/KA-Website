@@ -9,7 +9,11 @@ function Courses() {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await axios.get('https://crpch.in/api/ka/course_copy/');
+        const response = await axios.get('https://crpch.in/api/ka/course_copy/',{
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
         setCourses(response.data.table_data);
       } catch (error) {
         console.error('Error fetching courses:', error);
