@@ -9,7 +9,7 @@ function Courses() {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await axios.get('https://crpch.in/api/ka/course_copy/',{
+        const response = await axios.get('https://crpch.in/api/ka/course_copy/?id=7980591782',{
           headers: {
             'Content-Type': 'application/json'
           }

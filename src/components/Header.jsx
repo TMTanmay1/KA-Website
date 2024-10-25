@@ -53,15 +53,15 @@ function Header() {
   };
 
   const handleAdminLoginClick = () => {
-    window.open('https://krishna-academy.vercel.app/', '_blank');
+    window.open('https://rbt-softbyte-admin.vercel.app/', '_blank');
   };
 
   const handleStaffLoginClick = () => {
-    window.open('https://ka-staff-dashboard.vercel.app/', '_blank');
+    window.open('https://rbt-softbyte-staff.vercel.app/', '_blank');
   };
 
   const handleStudentLoginClick = () => {
-    window.open('https://ka-student-dashboard.vercel.app/', '_blank');
+    window.open('https://rbt-softbyte-student.vercel.app/', '_blank');
   };
 
   const handleCBMCEClick = () => {

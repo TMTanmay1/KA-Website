@@ -51,7 +51,7 @@ const StudentRegistration = () => {
     // Fetch courses from the API
     const fetchCourses = async () => {
       try {
-        const response = await axios.get(`https://crpch.in/api/ka/course_copy/`);
+        const response = await axios.get(`https://crpch.in/api/ka/course_copy/?id=7980591782`);
         setCourses(response.data.table_data);
       } catch (error) {
         console.error('Error fetching courses:', error);
