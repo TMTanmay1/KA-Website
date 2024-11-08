@@ -241,6 +241,7 @@ const StudentRegistration = () => {
           InputProps={{
             readOnly: true,
           }}
+          required
         />
       </Grid>
 
@@ -258,7 +259,7 @@ const StudentRegistration = () => {
           <Grid item xs={12} sm={6}>
             <FormControl fullWidth>
               <InputLabel id="gender-label">Gender</InputLabel>
-              <Select labelId="gender-label" id="gender" value={gender} onChange={(e) => setGender(e.target.value)}>
+              <Select labelId="gender-label" id="gender" value={gender} onChange={(e) => setGender(e.target.value)} required>
                 <MenuItem value="Male">Male</MenuItem>
                 <MenuItem value="Female">Female</MenuItem>
                 <MenuItem value="Other">Other</MenuItem>
@@ -271,7 +272,7 @@ const StudentRegistration = () => {
             <FormControl fullWidth>
               <InputLabel id="marital-status-label">Marital Status</InputLabel>
               <Select labelId="marital-status-label" id="marital-status" 
-              
+              required
               value={maritalStatus} onChange={(e) => setMaritalStatus(e.target.value)}
               >
                 <MenuItem value="Unmarried">Unmarried</MenuItem>
@@ -298,6 +299,7 @@ const StudentRegistration = () => {
               InputLabelProps={{
                 shrink: true,
               }}
+              required
               fullWidth
               value={dob}
               onChange={(e) => setDob(e.target.value)}
@@ -308,7 +310,7 @@ const StudentRegistration = () => {
           <Grid item xs={12} sm={6}>
             <FormControl fullWidth>
               <InputLabel id="category-label">Category</InputLabel>
-              <Select labelId="category-label" id="category" value={category} onChange={(e) => setCategory(e.target.value)}>
+              <Select labelId="category-label" id="category" value={category} onChange={(e) => setCategory(e.target.value)} required>
                 <MenuItem value="General">General</MenuItem>
                 <MenuItem value="OBC">OBC</MenuItem>
                 <MenuItem value="SC">SC</MenuItem>
@@ -321,7 +323,7 @@ const StudentRegistration = () => {
           <Grid item xs={12} sm={6}>
             <FormControl fullWidth>
               <InputLabel id="religion-label">Religion</InputLabel>
-              <Select labelId="religion-label" id="religion" value={religion} onChange={(e) => setReligion(e.target.value)}>
+              <Select labelId="religion-label" id="religion" value={religion} onChange={(e) => setReligion(e.target.value)} required>
                 <MenuItem value="Hindu">Hindu</MenuItem>
                 <MenuItem value="Muslim">Muslim</MenuItem>
                 <MenuItem value="Christian">Christian</MenuItem>
@@ -334,7 +336,7 @@ const StudentRegistration = () => {
           <Grid item xs={12} sm={6}>
             <FormControl fullWidth>
               <InputLabel id="qualification-label">Qualification</InputLabel>
-              <Select labelId="qualification-label" id="qualification" value={qualification} onChange={(e) => setQualification(e.target.value)}>
+              <Select labelId="qualification-label" id="qualification" value={qualification} required onChange={(e) => setQualification(e.target.value)}>
                 <MenuItem value="10th">10th</MenuItem>
                 <MenuItem value="12th">12th</MenuItem>
                 <MenuItem value="Graduation">Graduation</MenuItem>
